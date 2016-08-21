@@ -12,8 +12,15 @@ do
     if [ $? = 0 ]; then
       echo "正常にエンコード終了"
       counter=$(( counter + 1 ))
+      echo "エンコード元TSファイルを削除します"
+      rm $(echo $targetFileName)
+      if [ %? = 0]; then
+        echo "正常に削除ができました"
+      else
+        echo "ファイルの削除に失敗しました スクリプトを終了します" 1>&2
+        exit 1
     else
-      echo "エンコードに失敗した模様... スクリプトを終了します"
+      echo "エンコードに失敗した模様... スクリプトを終了します" 1>&2
       exit 1
     fi
   else
