@@ -28,7 +28,7 @@ my $ffmpeg_cmd = "/home/tubone/bin/ffmpeg";
 my $margin_sec = 1;
  
 # comskipのCM検出方法
-my $detect_flag = 255;
+my $detect_flag = 198;
  
 # comskipの初期設定ファイル
 my $ini_file = "/opt/comskip_batch/comskip/comskip.ini";

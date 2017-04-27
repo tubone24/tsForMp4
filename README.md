@@ -9,3 +9,10 @@
 * ffmpeg(H.264 ACCのライブラリもビルドされていること)
 * comskip
 * wine(comskip はEXEファイルなのでWindowsをエミュレートします)
+
+## お借りした資源
+### cmcut.pl
+https://www.jifu-labo.net/2015/12/comskip_wine32/
+こちらで掲載されているCMカットスクリプトを利用します。
+
+

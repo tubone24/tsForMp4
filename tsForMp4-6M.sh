@@ -22,6 +22,7 @@ do
         ~/tsForMp4/cmcut.pl -i $tmpTsFileName -o $tmpTscutFileName
         if [ $? = 0 ] ; then
           echo "CMカット成功"
+          rm $(echo $tmpTsFileName)
           ~/bin/ffmpeg -i $(echo $tmpTscutFileName) -loglevel error -threads 2 \
           -codec:v libx264 -c:a aac -profile:v high -level 4.0 -preset veryslow -tune animation -crf 18 -s 1440x1080 -b:a 192k \
           -y -f mp4 \
