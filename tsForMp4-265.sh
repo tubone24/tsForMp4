@@ -24,7 +24,7 @@ do
           echo "CMカット成功"
           rm $(echo $tmpTsFileName)
           ~/bin/ffmpeg -i $(echo $tmpTscutFileName) -loglevel error -threads 2 \
-          -codec:v libx264 -c:a aac -profile:v high -level 4.0 -preset veryslow -tune animation -crf 19 -s 1440x1080 -b:a 192k \
+          -codec:v libx265 -c:a aac  -preset veryslow -crf 19 -b:a 192k \
           -y -f mp4 \
           $(echo $tmpMp4FileName)
           if [ $? = 0 ]; then
